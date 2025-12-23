@@ -1,0 +1,459 @@
+/* ===== Responsive Design ===== */
+
+/* Large screens (≥1200px) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    .section-title {
+        font-size: 3.5rem;
+    }
+}
+
+/* Medium screens (992px - 1199px) */
+@media (max-width: 1199px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .section-title {
+        font-size: 2.75rem;
+    }
+    
+    .pricing-card.popular {
+        transform: none;
+    }
+    
+    .pricing-card.popular:hover {
+        transform: translateY(-10px);
+    }
+}
+
+/* Tablets (768px - 991px) */
+@media (max-width: 991px) {
+  
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-illustration {
+        margin-top: 3rem;
+    }
+    
+    .dashboard-preview {
+        margin-top: 3rem;
+    }
+    
+    .cta-title {
+        font-size: 2rem;
+    }
+    
+    .cta-card {
+        padding: 3rem;
+    }
+}
+
+/* Mobile Landscape (576px - 767px) */
+@media (max-width: 767px) {
+    .hero-title {
+        font-size: 2.25rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero-actions .btn {
+        width: 100%;
+    }
+    
+    .floating-card {
+        position: relative;
+        margin: 1rem auto;
+        width: fit-content;
+    }
+    
+    .card-analytics,
+    .card-users,
+    .card-performance {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 1rem;
+    }
+    
+    .testimonials-slider {
+        grid-template-columns: 1fr;
+    }
+    
+    .company-logos {
+        overflow-x: auto;
+        padding: 1rem 0;
+    }
+    
+    .logo-slider {
+        width: max-content;
+        animation: none;
+    }
+    
+    .cta-card {
+        text-align: center;
+        padding: 2rem;
+    }
+    
+    .cta-card .btn {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+/* Mobile Portrait (≤575px) */
+@media (max-width: 575px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .hero-subtitle,
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .btn-xl {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .feature-card,
+    .testimonial-card,
+    .pricing-card,
+    .solution-card {
+        padding: 1.5rem;
+    }
+    
+    .pricing-price .amount {
+        font-size: 2.5rem;
+    }
+    
+    .dashboard-features .feature-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer {
+        padding: 3rem 0 1.5rem;
+    }
+    
+    .footer-bottom {
+        text-align: center;
+    }
+    
+    .footer-bottom-links {
+        text-align: center !important;
+        margin-top: 1rem;
+    }
+    
+    .back-to-top {
+        bottom: 1rem;
+        right: 1rem;
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Small Mobile (≤375px) */
+@media (max-width: 375px) {
+    .hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .badge-wrapper {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .hero-stats .row {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .hero-stats .col-4 {
+        width: 100%;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --light-color: #f8fafc;
+        --dark-color: #0f172a;
+    }
+}
+
+/* Print styles */
+@media print {
+    .navbar,
+    .hero-actions,
+    .cta-section,
+    .footer,
+    .back-to-top {
+        display: none;
+    }
+    
+    body {
+        color: #000;
+        background: #fff;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #0056b3;
+        --secondary-color: #004085;
+    }
+    
+    .btn-primary {
+        border: 2px solid currentColor;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .card-hover:hover,
+    .pricing-card:hover,
+    .solution-card:hover,
+    .testimonial-card:hover {
+        transform: none;
+    }
+    
+    .nav-link::after {
+        display: none;
+    }
+    
+    .floating-card {
+        animation: none;
+    }
+}
+
+/* Mobile Navigation */
+@media (max-width: 991px) {
+    .navbar-nav .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: 100%;
+        margin-top: 0;
+    }
+    
+    .navbar-nav .nav-link {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    .navbar-actions {
+        padding-top: 1rem;
+        border-top: 1px solid var(--gray-800);
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 576px) {
+    .navbar-brand .brand-text {
+        font-size: 1.25rem;
+    }
+    
+    .navbar-toggler {
+        padding: 0.25rem;
+    }
+}
+
+/* Mobile & Tablet Hero Section */
+@media (max-width: 991px) {
+    .hero-section .row {
+        flex-direction: column;
+    }
+    
+    .hero-section .col-lg-6 {
+        width: 100%;
+    }
+    
+    .hero-illustration {
+        order: 2;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-content {
+        order: 1;
+    }
+    
+    /* If you still want the image to come after content on mobile */
+    .hero-section .row {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .hero-section .row > .col-lg-6:first-child {
+        order: 1;
+    }
+    
+    .hero-section .row > .col-lg-6:last-child {
+        order: 2;
+    }
+
+    /* Trusted Companies Section */
+@media (max-width: 991px) {
+    .trusted-section {
+        padding: 3rem 0;
+    }
+    
+    .company-logos {
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    .logo-slider {
+        display: flex;
+        animation: slideMobile 20s linear infinite;
+        gap: 2rem;
+        padding: 1rem 0;
+    }
+    
+    .logo-item {
+        flex-shrink: 0;
+        padding: 0.75rem 1.5rem;
+        background: var(--gray-800);
+        border-radius: var(--border-radius);
+        color: var(--gray-400);
+        font-weight: 600;
+        font-size: 1rem;
+        transition: var(--transition);
+        white-space: nowrap;
+        min-width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    /* Adjust animation speed for better mobile experience */
+    @keyframes slideMobile {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    
+    /* Add gradient fade effect on edges */
+    .company-logos:before,
+    .company-logos:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 60px;
+        height: 100%;
+        z-index: 2;
+    }
+    
+    .company-logos:before {
+        left: 0;
+        background: linear-gradient(to right, var(--darker-color), transparent);
+    }
+    
+    .company-logos:after {
+        right: 0;
+        background: linear-gradient(to left, var(--darker-color), transparent);
+    }
+}
+
+/* Tablet specific adjustments */
+@media (max-width: 768px) and (min-width: 576px) {
+    .logo-item {
+        min-width: 130px;
+        padding: 0.75rem 1.25rem;
+        font-size: 0.95rem;
+    }
+    
+    .logo-slider {
+        gap: 1.5rem;
+    }
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 575px) {
+    .trusted-section {
+        padding: 2rem 0;
+    }
+    
+    .logo-item {
+        min-width: 120px;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        border-radius: 10px;
+    }
+    
+    .logo-slider {
+        gap: 1rem;
+    }
+    
+    .company-logos {
+        padding: 0 10px;
+    }
+}
+
+/* Pause animation on hover for better UX */
+.logo-slider:hover {
+    animation-play-state: paused;
+}
+
+.logo-item:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    color: var(--primary-color);
+    background: var(--gray-700);
+}
